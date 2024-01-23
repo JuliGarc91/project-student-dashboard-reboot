@@ -1,4 +1,4 @@
-.link, .link Link:visited {
+.link, .link Link:visited, .members Link:visited {
     font-size: 10px;
     font-style: bold;
     color: var(--primary);
@@ -26,6 +26,8 @@ aside {
   display: flex;
   justify-content: center;
 }
+
+/* code for button! Used template from https://enjeck.com/btns/ */
 
 .border-flip {
     display: inline-block;
@@ -92,5 +94,4 @@ aside {
     .scores {
         grid-template-columns: 1fr; /* Adjusted for single column layout on mobile */
     }
-
 }

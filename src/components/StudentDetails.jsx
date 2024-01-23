@@ -15,14 +15,6 @@ const StudentDetails = ({
         return <div>Student not found</div>;
     }
 
-    // const handleSubmit = (event) => {
-    //   event.preventDefault();
-    //   console.log("Form submitted with:", formInput);
-    // };
-
-    // const handleTextChange = (event) => {
-    //   setFormInput({ ...formInput, [event.target.name]: event.target.value });
-    // };
 
     const calculatePercentage = (current, goal) =>
         ((current / goal) * 100).toFixed(2);
@@ -46,11 +38,9 @@ const StudentDetails = ({
                             {/* Boolean stuff to determine ontrack/offtrack status */}
                             <li>
                                 Status:{" "}
-                                {
-                                    determineTrackStatusStudentDetails([
-                                        student,
-                                    ])[0]
+                                {determineTrackStatusStudentDetails([student])[0]
                                 }
+                                {/* only passing one student in this scenario, it's wrapped in an array to match expected input format of the function (array as arg). The [0] at the end is used to access the first (and in this case, only) result returned by the function, which is the track status of the given student */}
                             </li>
                         </ul>
                     </div>
